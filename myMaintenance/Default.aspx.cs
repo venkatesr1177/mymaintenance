@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using NAM.Common;
+using System;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace myMaintenance
 {
@@ -11,7 +8,12 @@ namespace myMaintenance
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            var objEmployee = new Employee { 
+                Id =1,
+                Name = "Demo"
+            };
+            Response.Write("Id: " + objEmployee.Id);
+            Response.Write("Name: " + objEmployee.Name);
         }
     }
 }
